@@ -109,6 +109,18 @@ Define when to recommend each suggested-team label:
 - suggested-team/developer-experience
 - suggested-team/support-triage
 -->
+Categorize the priority of the bug report as follow:
+
+- priority/p0 - complete outrage or unrecoverable loss
+- priority/p1 - blocking bug with no workaround
+- priority/p2 - low impact bug or major bug with workaround
+
+Suggested team routing:
+- Agentic Workflows
+- GitHub Actions workflow definitions
+- workflow compilation
+- schema validation
+- automation logic
 
 ## 4. Find duplicates and related issues
 
@@ -148,3 +160,29 @@ For an incomplete issue, replace speculative classification with focused
 clarifying questions while retaining the routing recommendation and approval
 status when supported. Keep the entire comment under 300 words.
 -->
+Post one concise comment:
+
+```markdown
+## Triage report
+
+[One or two sentences summarizing the issue and recommended routing.]
+
+| Assessment | Result | Reasoning |
+|---|---|---|
+| Type | [type or unset] | [brief evidence] |
+| Priority | [priority or unset] | [brief evidence] |
+| Suggested team | [`suggested-team/*` or unset] | [brief evidence] |
+| Simulated tag | [`@example/team-name` or unset] | No real mention is created |
+| Approval | Pending maintainer review | Human confirms or changes the route |
+
+### Similar issues
+- #[number] — [duplicate or related, with a brief reason]
+
+### Next step
+[One focused action or the specific information still needed.]
+```
+
+Omit "Similar issues" when there are no useful matches. Include no more than two
+matches. For an incomplete issue, replace the table with concise clarifying
+questions, but retain the supported routing and approval status. Keep the report
+under 300 words, factual, respectful, and easy to scan.
