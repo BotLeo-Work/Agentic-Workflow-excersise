@@ -38,6 +38,16 @@ safe-outputs:
       - bug
       - feature
       - question
+      - needs-info
+      - duplicate
+      - spam
+      - invalid
+      - priority/p0
+      - priority/p1
+      - priority/p2
+      - suggested-team/workflows
+      - suggested-team/developer-experience
+      - suggested-team/support-triage 
       # TODO 1: Add the labels needed for incomplete issues, duplicates,
       # invalid submissions, spam, priorities p0 through p2, and the three
       # suggested-team routing options.
@@ -70,7 +80,18 @@ repository context. Do not invent missing details.
 Define the evidence required for a bug and for a feature or task.
 Define what the workflow should do when essential information is missing.
 -->
+if the user opens an issue and reports a bug, make sure enough information is present for maintainer to act upon. At minimum, the reporter should supply OS type and version, hardware paltform, browser type and version they were using.
 
+For a bug, look for reproduction steps, expected and actual behavior, relevant
+logs or errors, and environment details. For a feature or task, look for the
+problem being solved, desired outcome, and enough scope to understand the
+request.
+
+If essential details are missing:
+
+- Apply `needs-info` when that label exists.
+- Ask only the specific questions needed to proceed.
+- Do not guess a type, priority, or solution.
 If the issue is clearly spam, gibberish, or a test submission, apply `spam` or
 `invalid` when available, explain the assessment briefly, and stop.
 
